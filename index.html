@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Play Spotify</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .play-button {
+      background-color: #1DB954;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+    .play-button:hover {
+      background-color: #1ed760;
+    }
+    .text-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .image-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .image-section img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    /* Serduszka */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+      z-index: 1;
+    }
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart:before {
+      top: -10px;
+      left: 0;
+    }
+    .heart:after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Muzyka w tle -->
+  <audio autoplay loop>
+    <source src="birds.mp3" type="audio/mpeg">
+    Twoja przeglądarka nie wspiera odtwarzacza audio.
+  </audio>
+
+  <!-- Serduszka -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDelay = Math.random() * 10 + 's';
+      heart.style.opacity = Math.random();
+      heart.style.scale = Math.random() * 1.5 + 0.5;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="container">
+    <h1>😍Kliknij myszko </h1>
+    <button class="play-button" onclick="window.open('https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB?si=81d6a109e52f4a58', '_blank')">▶️ Play</button>
+
+
+    <div class="text-section">
+      <h2>❤️ Kocham cię </h2>
+      <p>Kochana aurelciu, przede wszystkim chciałbym pogratulować ci skończenia szkoły która była dla ciebie bardzo stresująca zawsze wiedziałem że sobie poradzisz i zawsze w ciebie wierzyłem w tym trudnym momencie i nadal wierzę, lecz wiem że sobie poradzisz jesteś bardzo zdolną i wartościową kobietą nie tylko na świecie ale w moim życiu w moich oczach po prostu jesteś przecudowną dziewczyną która mimo swoich gorszych chwil jest zawsze ze mną na dobre i na złe zobacz ile razem już przeżyliśmy tych cudownych i gorszych chwil, to tylko pokazuje jak bardzo się kochamy i jak bardzo potrafimy się zrozumieć, od momentu kiedy zauważyłem jak bardzo cię kocham od momentu którego mnie zmieniłaś i gdy  zauważyłem że jesteś przyszłością reszty mojego życia zmieniłem wszystkie moje perspektywy i zachowania które nie były w większości dobre to tylko pokazuje jak bardzo jesteś ważna i jaki masz dobry wpływ na mnie, jeżeli miałbym cię opisać to zabrakłoby słów z każdego języka na świecie twoje czyny i twoja obecność jest po prostu nie do opisania jedyne co mogę ci teraz powiedzieć to Dziękuje, dziękuje ci z  całego mojego serduszka w moich oczach naprawdę nie jesteś taką jak się czasami opisujesz niech ci da to do myślenia że nie jesteś złą dziewczyną tylko najwspanialszą na świecie, wierze w to że sam bóg zesłał nas sobie na drogę po tym ile przeszłaś i po tym co mi się przytrafiało wkońcu nadeszsła chwila żebyś dostała to co zawsze chciałaś- miłości, rodziny, szczerości a ja mogę ci obiecać i przysiąc że będę wypełniał te 3 bardzo wartościowe rzeczy najbardziej jak mogę ale i nie tylko to chcę żebyśmy byli przykładem że na tym świecie jest jeszcze miłość która już dawno zaniknęła- już jesteśmy przykładem kochanie, to co między nami jest to jest dar, dar który nie dostaje się tak po prostu, dar za który będziemy wdzięczni do końca życia, pamiętaj że jesteś iskrą na lepszy świat, a obydwoje jesteśmy pożarem miłości, pożarem miłosci którego nie da się ugaśić i dopuki nasze serca biją nadal będziemy go rozwijać najbardziej jak potrafimy a wiesz dlaczego? Bo się kochamy a to jest najważniejsze w życiu bez miłości jesteśmy tylko liczbą w tym szarym świecie w dwójkę go kolorujemy i pokazujemy wartości i zasady idealnego związku mimo sprzeczek zawsze się pogodzimy zawsze potrafimy powiedzieć sobie kocham cię to jest piękne i pamiętaj nie martwmy się o to co będzie po naszym odejściu, ciało to jest rzecz która trzyma naszą duszyczkę w sobie, wszystkie wspomnienia, uczucia  odejdą razem z naszą duszą która utrzyma nas nawet po śmierci pamiętaj o tym że zawszę będę twoim oparciem twoją ostoją spokoju, i twoim powodem do śmiania, a najważniejsze będziesz przy mnie zawsze mogła poczuć tą miłość która jest ogromna wiedz że cię kocham najbardziej na świecie i że twój Kubuś nigdy cię nie opuści i zawsze będzie twoim dzidziusiem którego wychowałaś i mężczyzną który będzie zapewniał ci bezpieczeństwo, jaki idealną rodzinę, jestem pewien że twoja rodzina jest z ciebie dumna tak samo jak ja i wie jaką drogę przeszłaś aby znaleźć się w tym miejscu w którym teraz jesteś. Pamiętaj o tym zawsze, zawsze jestem w twoim serduszku w twojej głowie i mimo że teraz nie czujesz mnie fizycznie to na każdym kroku z tobą jestem zawsze wspieram cię swoją wiarą w ciebie. Kocham cię bardzo moja perełko jeszcze raz bardzo ci gratuluję tego co dzisiaj dokonałaś i dziękuje za całe zaangażowanie w to jacy dla siebie jesteśmy i to jak się rozumiemy jesteś wspaniałą dziewczyną na całym świecie kocham cię i życzę nam jak najlepiej jeszcze raz kocham cię myszko!
+</p>
+    </div>
+
+    <div class="image-section">
+      <h2>❤️To my słoneczko</h2>
+      <img src="https://i.pinimg.com/736x/0b/72/7d/0b727d01ab308cd8426f47399392e25b.jpg" alt="Obrazek 1">
+      <img src="https://i.pinimg.com/474x/0a/a2/29/0aa2293845e4e5da48f4e522e501458d.jpg" alt="Obrazek 2" style="margin-top: 20px;">
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- Serduszka -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDelay = Math.random() * 10 + 's';
+      heart.style.opacity = Math.random();
+      heart.style.scale = Math.random() * 1.5 + 0.5;
+      document.body.appendChild(heart);
+    }
+  </script>
+
